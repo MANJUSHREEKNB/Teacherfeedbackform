@@ -1,0 +1,50 @@
+package atm;
+
+import java.util.Scanner;
+
+public class TeacherFeedbackForm {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Teacher Feedback Form");
+        System.out.println("=====================");
+        
+        System.out.print("Enter your name: ");
+        String studentName = scanner.nextLine();
+        
+        System.out.print("Enter the teacher's name: ");
+        String teacherName = scanner.nextLine();
+        
+        System.out.println("Rate the teacher on a scale of 1 to 5:");
+        System.out.print("Teaching effectiveness (1-5): ");
+        int teachingEffectiveness = scanner.nextInt();
+        
+        System.out.print("Clarity of explanations (1-5): ");
+        int clarityOfExplanations = scanner.nextInt();
+        
+        System.out.print("Approachability (1-5): ");
+        int approachability = scanner.nextInt();
+        
+        System.out.print("Overall satisfaction (1-5): ");
+        int overallSatisfaction = scanner.nextInt();
+        
+        scanner.nextLine(); // Consume the newline character
+        
+        System.out.print("Additional comments (optional): ");
+        String additionalComments = scanner.nextLine();
+        
+        // Process and display feedback
+        System.out.println("\nThank you, " + studentName + "!");
+        System.out.println("Feedback for " + teacherName + ":");
+        System.out.println("Teaching Effectiveness: " + teachingEffectiveness);
+        System.out.println("Clarity of Explanations: " + clarityOfExplanations);
+        System.out.println("Approachability: " + approachability);
+        System.out.println("Overall Satisfaction: " + overallSatisfaction);
+        System.out.println("Additional Comments: " + additionalComments);
+        
+        // You can save this feedback data to a database or file for further analysis.
+        
+        scanner.close();
+    }
+}
+
